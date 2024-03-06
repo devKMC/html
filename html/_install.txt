@@ -1,1 +1,10 @@
+웹 바로보기
+
 Live server : 웹 바로 열기 (확장시스템)
+
+주석 색상 변경
+
+보기 메뉴 -> 팔레트 -> Preferences: Open User Settings (json) 코드 작성
+"editor.tokenColorCustomizations": {
+        "comments": "#FC5D"
+    }
