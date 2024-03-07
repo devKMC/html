@@ -1,1 +1,21 @@
 Live server 비쥬얼코드에서 확장으로 다운로드
+
+vscode 확장자 설치 항목들
+color highlight
+database client jdbc
+debugger for java
+extension pack for java
+git hub pull request
+jupyter
+jupyter cell tags
+jupyter keymap
+jupyter notebook renderers
+jupyter slide show
+mysql
+mavenforjava
+project manager for java
+pylancepython
+python debugger
+rainbow csv
+
+https://github.com/devKMC/
