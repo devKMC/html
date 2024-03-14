@@ -8,10 +8,50 @@
     src: url(../font/KakaoBold.ttf);
 }
 
-.kakao-regular-font{
-    font-family: 'KakaoRegular', sans-serif;
+*{
+    font-family: 'kakaoRegula', sans-serif;
+    margin: 0px;
+    padding: 0px;
 }
 
-.kakao-bold-font{
+#wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+
+    width: 1712px;
+}
+
+.title-box{
+    font-size: 52px;
+    line-height: 68px;
+    letter-spacing: -1px; /* 글자 간격 */
     font-family: 'KakaoBold', sans-serif;
+    font-weight: 400;
+}
+
+.title-box::before{ /*이미지를 넣어주기 위하여 before 사용*/
+    width: 78px;
+    height: 78px;
+    display: inline-block;
+    content: "";
+    /*이미지를 보여주려면 사이즈를 지정해야하는데 지정하기 위해선 인라인 블럭으로 지정*/
+    background-image: url(https://www.kakaocorp.com/page/ico_tit_service.gif);
+    background-size: 100%;
+    vertical-align: top;
+}
+.more-box{
+    display: flex;
+    justify-content: center;
+}
+
+.more-button{
+    width: 316px;
+    height: 76px;
+    background-color: rgba(240 , 240, 240, 1);
+    text-align: center;
+    line-height: 76px;
+    font-size: 24px;
+    letter-spacing: -0.4;
+    border-radius: 38px; /* radius 할때 어디를 기준으로 할건지 확인해서 값을 지정하면 정확하게 지정 가능 */
 }
