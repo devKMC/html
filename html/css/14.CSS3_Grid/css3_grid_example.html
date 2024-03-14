@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>grid 연습</title>
+    <style>
+    #grid_wrapper{
+        display: grid;
+        grid-template: 
+        "header header" 120px
+        "top-navigation top-navigation" 80px
+        "side-navigation main" 800px
+        "footer footer" 200px
+        / 400px 1fr ;
+        row-gap: 24px;
+        column-gap: 24px;
+        
+    }
+    #header {
+        background-color: rgba(253, 174, 174, 0.8);
+        grid-area: header;
+    }
+    #top-navigation {
+        background-color: rgba(121, 64, 64, 0.8);
+        grid-area: top-navigation;
+    }
+    #side-navigation {
+        background-color: rgba(71, 36, 36, 0.8);
+        grid-area: side-navigation;
+    }
+    #main {
+        background-color: rgba(74, 232, 195, 0.8);
+        grid-area: main;
+    }
+    #footer {
+        background-color: rgba(228, 13, 13, 0.8);
+        grid-area: footer;
+    }
+    </style>
+
+    </head>
+    <body>
+    <div id = "grid_wrapper">
+        <div id = "header"></div>
+        <div id = "top-navigation"></div>
+        <div id = "side-navigation"></div>
+        <div id = "main"></div>
+        <div id = "footer"></div>
+    </div>
+    </body>
+    </html>

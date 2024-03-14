@@ -12,9 +12,9 @@
             background-color: sandybrown;
             display: flex;
             align-items: center;
-            flex-direction: column;
-            justify-content: space-between;
-            
+            flex-direction: row;
+            justify-content: center;
+            gap: 8px;
         }
         .flex-item{
             border: 1px solid rgb(33, 151, 255);
@@ -23,7 +23,13 @@
             background-color: red;
             font-size: 24px;
             font-weight: 900;
+            flex-grow: 1;
+            /* margin: 8px; */
+            
+            
         }
+        /* .flex-item:first-child {margin-left: 0px;} */
+        
     </style>
 </head>
 <body>
@@ -31,8 +37,6 @@
         <div class= "flex-item">1</div>
         <div class= "flex-item">2</div>
         <div class= "flex-item">3</div>
-        <div class= "flex-item">4</div>
-
 
 </body>
 </html>
