@@ -40,6 +40,52 @@
     background-size: 100%;
     vertical-align: top;
 }
+
+/*Contents Box*/
+.contents-box {
+    display: grid;
+    grid-template: 
+        /*행 지정*/
+        "comunication businese" 180px
+        "life shopping" 180px
+        "entertainment social" 180px
+        /*가지는 비율*/
+        / 1fr 1fr;
+        /*컨텐츠간에 간격*/
+        gap: 16px;
+    ;
+}
+
+.content-title{
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.content-icons-box{
+    display: flex;
+    gap: 12px;
+}
+
+.icon-button{
+    width: 56px;
+    height: 56px;
+    border-radius: 12px;
+}
+.icon-button::hover{
+    cursor: pointer;
+}
+.more {
+    background-color: rgba(0, 0, 0, 0.4);
+    color: rgba(255, 255, 255, 1);
+    text-align: center;
+    line-height: 56px;
+    font-size: 36px;
+}
+.more:hover{
+    background-color:rgba(0, 0, 0, 1);
+}
+
+/* More Box */
 .more-box{
     display: flex;
     justify-content: center;
@@ -49,9 +95,41 @@
     width: 316px;
     height: 76px;
     background-color: rgba(240 , 240, 240, 1);
-    text-align: center;
-    line-height: 76px;
     font-size: 24px;
     letter-spacing: -0.4;
     border-radius: 38px; /* radius 할때 어디를 기준으로 할건지 확인해서 값을 지정하면 정확하게 지정 가능 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
 }
+
+/* 가상클래스 호버 */
+.more-button:hover{
+    cursor: pointer;
+}
+
+.round-black{
+    width: 24px;
+    height: 24px;
+    background-color: rgba(0, 0, 0, 1);
+    color: rgba(255, 255, 255, 1);
+    text-align: center;
+    line-height: 20px;
+    border-radius: 12px;
+    font-size: 16px;
+}
+.content-card{
+    background-color: rgba(240, 240, 240, 1);
+    border-radius: 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 64px;
+}
+
+/*커서 깜빡임 만들기 (버튼에 올라갔을때 라운드를 바꿔라)*/
+.more-button:hover .round-black{
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
