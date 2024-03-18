@@ -1,0 +1,6 @@
+node js 설치 해주기
+cd로 경로 잡고 node 로 자바스크립트를 터미널로 불러 올 수 있음 cd / 
+javascript es6 확장자로 자동완성 가능
+npm -v , npx -v  m은 다운 삭제 업로드 관련 , x 는 실행하는 용도로 쓰이는 것
+
+터미널에 npm install -g npm --latest 로 npm / npx 버전 업그레이드 가능
