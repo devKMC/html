@@ -90,74 +90,92 @@ console.log('==============================');
 
 /*
     indexOf(element) : 
-    - 
-    - 
+    - 배열에서 매개변수로 전달된 요소를 검색하여 해당 인덱스를 반환
+    - 배열에 요소가 존재하지 않으면 -1을 반환
 */
+console.log(fruits.indexOf('banana'));
+console.log(fruits.indexOf('bana'));
 
 
 console.log('==============================');
 
 /*
     includes(element) :
-    - 
+    - 배열에 매개변수로 전달된 요소가 존재하면 true 반환 , 존재하지 않으면 false 반환
 */
+console.log(fruits.includes('banana'));
+console.log(fruits.includes('bana'));
 
 
 console.log('==============================');
 
 /*
-    push(element) :
-    - 
+    push(element) : 
+    - 배열의 마지막 인덱스에 요소를 추가하고 변경된 길이를 반환
 */
-
+console.log(fruits, fruits.length); 
+console.log(fruits.push('bana'));
+console.log(fruits);
 
 console.log('==============================');
 
 /*
     pop() :
-    - 
+    - 배열의 마지막 인덱스 요소를 제거하고 제거한 요소를 반환
 */
-
+console.log(fruits.pop());
+console.log(fruits);
 
 console.log('==============================');
 
 /*
     shift() :
-    - 
+    - 배열의 첫번째 요소를 제거하고 제거한 요소를 반환
 */
+console.log(fruits.shift());
+console.log(fruits);
 
 
 console.log('==============================');
 
 /*
     reverse() :
-    - 
+    - 배열의 순서를 역전
 */
-
+console.log(fruits.reverse());
+console.log(fruits);
 
 console.log('==============================');
 
 /*
     concat(array or item) : 
-    - 
+    - 매개변수로 전달된 값들을 해당 배열의 마지막 요소 뒤에 연결하여 새로운 배열을 반환
 */
+const newFurits = fruits.concat('apple','bana');
+console.log(newFurits);
+console.log(fruits);
 
 
 console.log('==============================');
 
 /*
     slice(start, end) : 
-    - 
+    - start에 해당하는 인덱스부터 end에 해당하는 인덱스 앞까지 복사하여 반환
 */
-
+console.log(newFurits.slice(1,3));
+console.log(newFurits);
 
 console.log('==============================');
 
 /*
-    splice(start, eleteCount, items...) :
-    - 
+    splice(start, elementeCount, items...) :
+    - 배열의 요소를 제거하고 제거한 위치에 요소를 갈아끼운 배열을 반환
+    - elementecount는 지정한 수 만큼 제거
 */
+// console.log(newFurits.splice(2, 1)); // 멜론(0) 바나나(1) 애플(2) 바나(3) 에서 제거하면서 애플을 반환하고
+// console.log(newFurits);              // 애플이 제거된 값이 나옴
 
-
+console.log(newFurits.splice(2,1,'peach')); // 멜론(0) 바나나(1) 애플(2) 바나(3) 에서 제거하면서 애플을 반환하고
+console.log(newFurits);                     // 애플이 peach 로 변경된 값이 나옴
 
 
