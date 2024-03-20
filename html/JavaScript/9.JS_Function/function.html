@@ -13,7 +13,12 @@
     <h1>결과 <span id="result"></span></h1>
 
     <script>
-        
+        const plusButton = document.getElementById('plus-button');
+        plusButton.addEventListener('click',function (){                  // + 버튼을 클릭
+            const a = document.getElementById('a');
+            const b = document.getElementById('b');
+            document.getElementById('result').innerText = Number(a.value) + Number(b.value); 
+        });
     </script>
 
 </body>
