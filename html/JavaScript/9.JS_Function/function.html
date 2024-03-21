@@ -12,12 +12,13 @@
     <button id="minus-button">-</button>
     <h1>결과 <span id="result"></span></h1>
 
+    
     <script>
-        const plusButton = document.getElementById('plus-button');
-        plusButton.addEventListener('click',function (){                  // + 버튼을 클릭
-            const a = document.getElementById('a');
+        const plusButton = document.getElementById('plus-button');                             //  요소로  +버튼을 받는다     (어떠한 기능을 전달받을때 이 기능을 실행해라)
+        plusButton.addEventListener('click',function (){                                       // + 버튼을 클릭
+            const a = document.getElementById('a');                                             // 받을 값을  a, b에 선언
             const b = document.getElementById('b');
-            document.getElementById('result').innerText = Number(a.value) + Number(b.value); 
+            document.getElementById('result').innerText = Number(a.value) + Number(b.value);   // + 버튼을 클릭했을때 결과로 받으려고 함
         });
     </script>
     <script>

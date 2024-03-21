@@ -70,6 +70,7 @@ console.log('==============================');
     filter(콜백 함수) : 콜백함수의 반환 값이 true 인 배열의 요소의 값만을 추출한 새로운 배열을 생성
     - 배열에서 특정 케이스만 필터링 조건으로 추출하여 새로운 배열을 만들고 싶을 때 사용
     - 원본 배열 변경 불가능
+    - 특정한 게시물 따로 보고 싶을 떄 사용 가능
 */
 const filterArray = array.filter(function(item,index){
     return item % 2 === 1 ; 
