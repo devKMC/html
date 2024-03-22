@@ -3,29 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>3월 22일 Fetch 연습</title>
+    <title>Fetch 연습</title>
 </head>
-<body>
+<body style="background-color: rgba(0, 0, 0, 0.7);">
     <div>
-        <span>이름 : </span><input id = "name" type = "text" />
-        <span>나이 : </span><input id = "age" type = "number"  />
-        <button id="submit" type="button" onclick="onSubmitHandler()">전송</button>
+        <span>이름 : </span><input id="name" type="text"/>
+        <span>나이 : </span><input id="age" type="number"/>
+        <button id="submit" type="button" onclick="onSubmitHandler();">전송</button>
+        <button id="post-submit" type="button" onclick="onPostSubmitHandler();">전송</button>
     </div>
-    
     <script>
-        const onSubmitHandler = function(event){
-            const nameInputElement = document.getElementById("name");
-            const ageInputElement = document.getElementById("age");
+        const onSubmitHandler = function (event) {
+            const nameInputElement = document.getElementById('name');
+            const ageInputElement = document.getElementById('age');
 
             const name = nameInputElement.value;
-            const age = ageInputElement.value;
-            
-            fetch(`http://localhost:4000/request-data/path-variable/${age}/${name}`)
-            .then(function(response){
-                console.log(response);
-            })
-        }
+            const age =ageInputElement.value;
 
+            fetch(`http://localhost:4000/request-data/path-variable/${age}/${name}`,{
+                method : 'DELETE'
+            })
+                .then(function (response){
+                    response.text()
+                                    .then(function(result) {
+                                    console.log(result);
+                                    });
+                })
+        }
+        const onPostSubmitHandler = function (event) {
+            fetch('http://localhost:4000/request-data/post', {
+                method : 'POST',
+                headers : {
+                    'Content-Type' : 'Application/json'
+                },
+                body : JSON.stringify({})
+            })
+            .then(function (response) {
+                console.log(response);
+                response.text()
+                                    .then(function(result) {
+                                    console.log(result);
+                                    });
+            })
+            .catch(function (error){
+                console.log(error);
+            });
+        }
     </script>
 </body>
 </html>
