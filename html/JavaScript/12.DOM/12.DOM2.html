@@ -89,11 +89,11 @@
             - id 속성의 값을 반환 또는 변경
             - 모든 브라우저에서 사용
         */
-        let userPwMessageElement = document.getElementById('user-p-message');
-        console.log(userPwMessageElement);
-        userPwMessageElement = 'user-pw-message';
-        console.log(userPwMessageElement);
-
+        
+        const userPwMessageElement = document.getElementById('user-p-message');
+        console.log(userPwMessageElement.id);
+        userPwMessageElement.id = 'user-pw-message';
+        console.log(userPwMessageElement.id);
 
         console.log('==============================');
 
@@ -132,13 +132,14 @@
             - undefined 반환
             - 모든 브라우저에서 동작
         */
-        const userPwinputElement = document.getElementById('user-pw');
-        console.log(userPwinputElement.hasAttribute('type'));
-        console.log(userPwinputElement.getAttribute('type'));
+        const userPwInputElement = document.getElementById('user-pw');
+        console.log(userPwInputElement.hasAttribute('type'));
+        console.log(userPwInputElement.getAttribute('type'));
+        userPwInputElement.setAttribute('type', 'text');
         // 타입 변환을 통해 비밀번호가 텍스트로 보이게끔 해줌
         // userPwinputElement.setAttribute('type','date');
         // 만약 속성을 제거하면 속성의 기본값으로 지정 됨
-        // userPwinputElement.removeAttribute('type');
+        userPwinputElement.removeAttribute('type');
 
 
         console.log('==============================');
@@ -155,7 +156,7 @@
             - 마크업 태그를 포함한 문자열이 들어가면 마크업을 순수 문자열로 인식
             - IE9 이상 동작
         */
-        // userIdMessageElement.textContent = '잘못된 아이디 입니다';
+        userIdMessageElement.textContent = '잘못된 아이디 입니다';
 
 
         console.log('==============================');
@@ -200,6 +201,7 @@
         const signUpBottonText = document.createTextNode('회원가입');
         signUpBottonElement.appendChild(signUpBottonText);
         signUpBottonElement.className = 'custom-button';
+        
         const buttonBoxElement = document.getElementById('button-box');
         buttonBoxElement.appendChild(signUpBottonElement);
 
@@ -214,7 +216,7 @@
             - 두번째 매개변수 html 문자열
             - 모든 브라우저에서 동작
         */
-        buttonBoxElement.insertAdjacentHTML('beforeend','<button class="custom-botton"">회원가입</button>');
+        buttonBoxElement.insertAdjacentHTML('afterbegin', '<button class="custom-button">회원가입</button>');
 
 
         console.log('==============================');
