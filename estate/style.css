@@ -1,0 +1,36 @@
+*{
+    margin: 0px;
+}
+/* vh = 화면을 기준 */
+#sign-in-wrapper{
+    display: flex;
+    width: 100%;   
+    height: 100vh;
+    min-height: 1024px;
+}
+
+/*
+    클래스를 가져오는 방법 (.)
+
+*/
+.sign-in-image-box{
+    min-width: 830px;
+    background-image: url('./resource/image/sign-in-background.png');
+    background-size: cover;
+}
+
+/*
+flex-grow를 사용하여 나머지영역 전체를 차지함
+min - width축소를 불가능하게 하고 기본적인 넓이를 차지하게 만듬(전체 넓이 - 이미지 크기 )
+
+*/
+.sign-in-box{
+    flex-grow: 1;
+    min-width: 610px;
+}
+
+.sign-in-container{
+    height: 523px;
+    width: 380px;
+    background-color: aqua;
+}
