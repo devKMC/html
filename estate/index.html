@@ -6,24 +6,27 @@
     <title>임대주택 가격 서비스</title>
     <link rel="stylesheet" href="./style.css">
 </head>
-<body>
-    <!-- 구조 -->
-    <div id="sign-in-wrapper"><!--전체 틀-->
-        <div class="sign-in-image-box"></div> <!--구조(레이아웃)은 id로 잡는게 좋음-->
+<body style="background-color: rgba(0, 0, 0, 0.6);">
+    <div id="sign-in-wrapper">
+        <div class="sign-in-image-box"></div>
         <div class="sign-in-box">
             <div class="sign-in-container">
-                <div class="sign-in-title" class="h1">임대주택 가격 서비스</div>
+                <div class="sign-in-title h1">임대주택 가격 서비스</div>
                 <div class="sign-in-contents">
                     <div class="sign-in-input-container">
-                        <div class = "input-box">
-                            <div class = "input-label">아이디</div>
-                            <div class = "input-content-box"></div>
-                            <div class = "input-message"></div>
+                        <div class="input-box">
+                            <div class="input-label label">아이디</div>
+                            <div class="input-content-box">
+                                <input class="input" type="text" placeholder="아이디를 입력해주세요."/>
+                            </div>
+                            <div class="input-message"></div>
                         </div>
-                        <div class = "input-box">
-                            <div class = "input-label">비밀번호</div>
-                            <div class = "input-content-box"></div>
-                            <div class = "input-message"></div>
+                        <div class="input-box">
+                            <div class="input-label label">비밀번호</div>
+                            <div class="input-content-box">
+                                <input class="input" type="password" placeholder="비밀번호를 입력해주세요."/>
+                            </div>
+                            <div class="input-message error">로그인 정보가 일치하지 않습니다.</div>
                         </div>
                     </div>
                     <div class="sign-in-button-container"></div>
