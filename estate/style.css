@@ -1,6 +1,24 @@
+@font-face {
+    font-family: 'Pretendard';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+
 *{
     margin: 0px;
 }
+
+.h1{
+    font-family: Pretendard;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 173%;
+    
+}
+
 /* vh = 화면을 기준 */
 #sign-in-wrapper{
     display: flex;
@@ -11,7 +29,6 @@
 
 /*
     클래스를 가져오는 방법 (.)
-
 */
 .sign-in-image-box{
     min-width: 830px;
@@ -19,18 +36,52 @@
     background-size: cover;
 }
 
-/*
+/* 
 flex-grow를 사용하여 나머지영역 전체를 차지함
 min - width축소를 불가능하게 하고 기본적인 넓이를 차지하게 만듬(전체 넓이 - 이미지 크기 )
 
+display: flex;
+justify-content: center;  주축 기준으로 중앙정렬
+align-items: center; 교차축 기준으로 중앙정렬 
 */
+
 .sign-in-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
     flex-grow: 1;
     min-width: 610px;
 }
 
 .sign-in-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    
     height: 523px;
     width: 380px;
-    background-color: aqua;
+    
+}
+
+.sign-in-title{
+    color: rgb(192, 51, 51); 
+}
+
+.sign-in-contents{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+}
+
+.sign-in-input-container{
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.input-box{
+    width: 100px;
 }
