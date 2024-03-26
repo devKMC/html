@@ -1,3 +1,16 @@
+
+/* 
+flex-grow를 사용하여 나머지영역 전체를 차지함
+min - width축소를 불가능하게 하고 기본적인 넓이를 차지하게 만듬(전체 넓이 - 이미지 크기 )
+
+클래스를 가져오는 방법 (.)
+vh = 화면을 기준 
+
+display: flex;
+justify-content: center;  주축 기준으로 중앙정렬
+align-items: center; 교차축 기준으로 중앙정렬 
+*/
+
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
 
 @font-face {
@@ -46,6 +59,78 @@
 
 .input::placeholder{
     color: rgba(138, 146, 166, 1);
+}
+
+/*로그인 버튼 스타일*/
+.primary-button{
+    box-sizing:border-box ;   /*가끔 사이즈가 맞지 않을 때 사용*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 8px 24px; 
+
+    background-color: rgba(28, 87, 232, 1);
+    border-radius: 6px;
+
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 175%;
+
+    color: rgba(255, 255, 255, 1);
+}
+
+/*로그인 클릭 커서 기능*/
+.primary-button:hover{
+    cursor: pointer;
+    opacity: 0.85;/*투명도*/
+}
+
+/*sns 버튼*/
+.sns-button {
+    width: 56px;
+    height: 56px;
+    border-radius: 56px;
+}
+
+.sns-button:hover {
+    cursor: pointer;
+    opacity: 0.9;
+}
+
+.kakao-button {
+    background-image: url(./resource/image/kakao-button.png); /* ./ <-- 현재위치 */
+}
+
+.naver-button {
+    background-image: url(./resource/image/naver-button.png);
+}
+
+/*회원가입 버튼 스타일*/
+.text-link{
+
+    color: rgba(113, 113, 113, 1);
+
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 175%;
+}
+
+/*회원가입 클릭 커서 기능*/
+.text-link:hover{
+    cursor: pointer;
+    opacity: 0.85;
+}
+
+.short-divider{
+    width: 64px;
+    border: 1px solid rgba(238, 238, 238, 1);
+}
+
+.full-width{
+    width: 100%;
 }
 
 #sign-in-wrapper {
@@ -129,4 +214,29 @@
 
 .error{
     color: rgba(255, 84, 64, 1);
+}
+
+.sign-in-button-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+
+    width: 100%;
+}
+
+.sign-in-sns-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+}
+
+.sns-container-title {
+    color: rgba(138, 146, 166, 1);
+}
+
+.sns-button-container {
+    display: flex;
+    gap: 24px;
 }
