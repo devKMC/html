@@ -11,6 +11,9 @@ justify-content: center;  주축 기준으로 중앙정렬
 align-items: center; 교차축 기준으로 중앙정렬 
 */
 
+
+
+
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
 
 @font-face {
@@ -20,8 +23,8 @@ align-items: center; 교차축 기준으로 중앙정렬
     font-style: normal;
 }
 
-*{
-    margin: 0;
+* {
+    margin: 0px;
     font-family: Pretendard;
 }
 
@@ -32,22 +35,22 @@ align-items: center; 교차축 기준으로 중앙정렬
     line-height: 173%;
 }
 
-.label{
+.label {
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
 }
 
-.input{
+.input {
     flex-grow: 1;
     border: 1px solid rgba(238, 238, 238, 1);
     border-radius: 6px;
-    padding: 8px 16px;
     outline: none;
+    padding: 8px 16px;
 
     background-color: rgba(255, 255, 255, 1);
-    
+
     font-family: Inter;
     font-size: 16px;
     font-style: normal;
@@ -57,18 +60,18 @@ align-items: center; 교차축 기준으로 중앙정렬
     color: rgba(35, 45, 66, 1);
 }
 
-.input::placeholder{
+.input::placeholder {
     color: rgba(138, 146, 166, 1);
 }
 
 /*로그인 버튼 스타일*/
-.primary-button{
-    box-sizing:border-box ;   /*가끔 사이즈가 맞지 않을 때 사용*/
+.primary-button {
+    box-sizing: border-box;/*가끔 사이즈가 맞지 않을 때 사용*/
     display: flex;
     justify-content: center;
     align-items: center;
 
-    padding: 8px 24px; 
+    padding: 8px 24px;
 
     background-color: rgba(28, 87, 232, 1);
     border-radius: 6px;
@@ -81,13 +84,31 @@ align-items: center; 교차축 기준으로 중앙정렬
     color: rgba(255, 255, 255, 1);
 }
 
-/*로그인 클릭 커서 기능*/
-.primary-button:hover{
-    cursor: pointer;
-    opacity: 0.85;/*투명도*/
+.disable-button {
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 8px 24px;
+
+    background-color: rgba(138, 146, 166, 1);
+    border-radius: 6px;
+
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 175%;
+
+    color: rgba(255, 255, 255, 1);
 }
 
-/*sns 버튼*/
+/*로그인 클릭 커서 기능*/
+.primary-button:hover {
+    cursor: pointer;
+    opacity: 0.85;
+}
+
 .sns-button {
     width: 56px;
     height: 56px;
@@ -100,35 +121,113 @@ align-items: center; 교차축 기준으로 중앙정렬
 }
 
 .kakao-button {
-    background-image: url(./resource/image/kakao-button.png); /* ./ <-- 현재위치 */
-}
+    background-image: url('../resource/image/kakao-button.png');
+}/* ./ <-- 현재위치 */
 
 .naver-button {
-    background-image: url(./resource/image/naver-button.png);
+    background-image: url('../resource/image/naver-button.png');
 }
 
 /*회원가입 버튼 스타일*/
-.text-link{
+.text-link {
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 175%;
 
     color: rgba(113, 113, 113, 1);
+}
+
+.text-link:hover {
+    cursor: pointer;
+    opacity: 0.85;
+}
+
+.short-divider {
+    width: 64px;
+    border: 1px solid rgba(238, 238, 238, 1);
+}
+
+.full-width {
+    width: 100%;
+}
+
+.sns-container-title {
+    color: rgba(138, 146, 166, 1);
+}
+
+.sns-button-container {
+    display: flex;
+    gap: 24px;
+}
+
+.input-box {
+    width: 100%;
+}
+
+.input-label {
+    color: rgba(138, 146, 166, 1);
+}
+
+.input-content-box{
+    display: flex;
+    gap: 10px;
+
+    margin-top: 8px;
+    margin-bottom: 4px;
+}
+
+.input-primary-button {
+    box-sizing: border-box;
+    width: 110px;
+    padding: 8px 24px;
+    border-radius: 6px;
+
+    background-color: rgba(58, 87, 232, 0.2);
 
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
     line-height: 175%;
+
+    color: rgba(45, 66, 178, 1);
+
+    text-align: center;
 }
 
-/*회원가입 클릭 커서 기능*/
-.text-link:hover{
+.input-primary-button:hover {
     cursor: pointer;
-    opacity: 0.85;
 }
 
-.short-divider{
-    width: 64px;
-    border: 1px solid rgba(238, 238, 238, 1);
+.input-disable-button {
+    box-sizing: border-box;
+    width: 110px;
+    padding: 8px 0px;
+    border-radius: 6px;
+
+    background-color: rgba(238, 238, 238, 1);
+
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 175%;
+
+    color: rgba(138, 146, 166, 1);
+
+    text-align: center;
 }
 
-.full-width{
-    width: 100%;
+.input-message {
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.primary {
+    color: rgba(58, 87, 232, 1);
+}
+
+.error {
+    color: rgba(255, 84, 62, 1);
 }
