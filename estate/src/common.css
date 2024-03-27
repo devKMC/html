@@ -180,7 +180,7 @@ align-items: center; 교차축 기준으로 중앙정렬
 .input-primary-button {
     box-sizing: border-box;
     width: 110px;
-    padding: 8px 24px;
+    padding: 8px 0px;
     border-radius: 6px;
 
     background-color: rgba(58, 87, 232, 0.2);

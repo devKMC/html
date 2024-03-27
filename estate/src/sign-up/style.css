@@ -8,7 +8,7 @@
 
 .sign-up-image-box {
     min-width: 830px;
-    background-image: url('../../resource/image/sign-up-background.png');
+    background-image: url('../../resource/image/sign-in-background.png');
     background-size: cover;/*지정한 값보다 이미지가 세로로 크기 때문에 사용 */
 }
 

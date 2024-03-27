@@ -18,7 +18,7 @@ function onSignInButtonClickHandler(event){
 }
 
 function onSignUpLinkClickhandler(event){
-    window.location.href = "https://google.com";
+    window.location.href = "../sign-up";
 
 }
 
