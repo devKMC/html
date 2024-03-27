@@ -1,7 +1,8 @@
 const ID = 'kim';
 const PASSWORD = '123asd!';
-const EMAIL = 'email@email.con';
+const EMAIL = 'email@email.com';
 const AUTH_NUMBER = '1010';
+
 
 
 const idInputElement = document.getElementById('id');
@@ -14,7 +15,9 @@ const checkAuthNumberButtonElement = document.getElementById('check-auth-number-
 
 const idMessageElement = document.getElementById('id-message');
 const emailMessageElement = document.getElementById('email-message');
+const authNumberMessageElement = document.getElementById('auth-number-message');
 
+const onSignInLinkElement = document.getElementById('sign-in-link')
 
 // 아이디 중복 확인
 function onIdInputHandler (event) {
@@ -60,9 +63,10 @@ function onCheckDuplicateClickHandler (event) {
 // 이메일 형식에 대한 확인 작업
 function onCheckEmailClickHandler (event) {
     const emailValue = emailInputElement.value;
+    if (!emailValue) return;
 
-    const emailReg = /^[a-zA-Z0-9]*@([-.]?[a-zA-Z0-9])*\\.[a-zA-Z]{2,4}$/; //자바 스크립트에서의 정규식
-    const isEmail = emailReg.test(emailValue);
+    const emailReg = /^[a-zA-Z0-9]*@([-.]?[a-zA-Z0-9])*\.[a-zA-Z]{2,4}$/; // (자바의 경우 중간에 역슬래시가 하나 더 들어가게됨)
+    const isEmail = emailReg.test(emailValue); // 공백은 클릭 안되게끔 함
     if(!isEmail){
         emailMessageElement.className = 'input-message error';
         emailMessageElement.textContent = '이메일 형식이 아닙니다.';
@@ -77,9 +81,35 @@ function onCheckEmailClickHandler (event) {
     }
 
     emailMessageElement.className = 'input-message primary';
-    emailMessageElement.textContent = '인증번호가 전송되었습니다.'
+    emailMessageElement.textContent = '인증번호가 전송되었습니다.';
 }
+
+// 이메일 인증에 대한 확인 작업
+function onCheckAuthNumberClickHandler (event){
+    const authNumberValue = authNumberInputElement.value;
+    if (!authNumberValue) return;
+
+    const isEqualAuthNumber = authNumberValue === AUTH_NUMBER;
+    if (!isEqualAuthNumber){
+        authNumberMessageElement.className = 'input-message error';
+        authNumberMessageElement.textContent = '인증번호가 일치하지 않습니다';
+        return;
+    }
+    authNumberMessageElement.className = 'input-message primary';
+    authNumberMessageElement.textContent = '인증번호가 확인되었습니다';
+}
+
+
+// 로그인에 대한 작업
+function onSignInLinkClickhandler(event){
+    window.location.href = "../sign-in";
+}
+
+onSignInLinkElement.addEventListener('click',onSignInLinkClickhandler);
+
 
 checkDuplicateButtonElement.addEventListener('click', onCheckDuplicateClickHandler);
 
 checkEmailButtonElement.addEventListener('click', onCheckEmailClickHandler);
+
+checkAuthNumberButtonElement.addEventListener ('click', onCheckAuthNumberClickHandler);

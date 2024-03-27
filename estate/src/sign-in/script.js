@@ -26,20 +26,7 @@ const onSignUpLinkElement = document.getElementById('sign-up-link');
 onSignUpLinkElement.addEventListener('click',onSignUpLinkClickhandler);
 
 
-//kakao 
-function onKakaoButtonClickHandler(){
-    window.location.href = 'http://developers.kaka.com';
-}
 
-
-// naver
-function onnaverButtonClickHandler(){
-    window.location.href = 'http://developers.naver.com';
-}
-
-const KakaoButtonClickElement = document.getElementById('kakaoLink');
-KakaoButtonClickElement.addEventListener('click', onKakaoButtonClickHandler);
-const naverButtonClickElement = document.getElementById('naverLink');
 
 
 
