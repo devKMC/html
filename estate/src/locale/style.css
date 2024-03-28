@@ -1,0 +1,54 @@
+#wrapper{
+    display: grid;
+    grid-template:
+        "logo topbar" 77px
+        /*만약 뷰포트 vh를 쓰게되면 찌그러지게됨*/
+        "sidenav main" minmax(944px,auto)
+        /*1fr은 남은 전체를 전부 차지함 찌그러짐을 방지하기위해 minmax를 사용*/
+        / 257px minmax(1182px,1fr);
+}
+
+.logo-container{
+    /*공간 표현 (그리드 템플릿 호출)*/
+    grid-area: logo;
+
+    /*중앙 정렬*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /*글자 스타일*/
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 173%;
+    color: rgba(64, 64, 64, 1);
+
+    /*선 표현*/
+    border-bottom: 1px solid rgba(233, 236, 239, 1);
+}
+
+.top-bar-container{
+    /*공간*/
+    grid-area: topbar;
+
+    /*정렬*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 0 24px;
+
+    /*선 표현*/
+    border-left: 1px solid rgba(233, 236, 239, 1);
+    border-bottom: 1px solid rgba(233, 236, 239, 1);
+
+}
+
+.side-navigation-containe{
+    grid-area: sidenav;
+}
+
+.main-container{
+    grid-area: main;
+}
