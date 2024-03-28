@@ -34,9 +34,10 @@
 
     /*정렬*/
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
 
+    /*요소의 내부여백 지정*/
     padding: 0 24px;
 
     /*선 표현*/
@@ -45,10 +46,79 @@
 
 }
 
+.top-bar-title{
+    /*글자 스타일*/
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    color: rgba(64 ,64 ,64, 1);
+}
+
 .side-navigation-containe{
     grid-area: sidenav;
+    padding: 16px 12px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.side-navigation-item{
+    border-radius: 6px;
+    /*위아래 ,좌우*/
+    padding: 8px 24px;
+
+    /*정렬*/
+    display: flex;
+    align-items: center;
+
+    gap: 16px;
+}
+
+.side-navigation-item:hover{
+    cursor: pointer;
+    opacity: 0.85;
+}
+
+.side-navigation-item.active{
+    background-color: rgba(58, 87, 232, 1);
+    /*글자 색상*/
+    color: rgba(255, 255, 255, 1);
+}
+
+.side-navigation-icon{
+    width: 24px;
+    height: 24px;
+
+    /*크기를 완벽하게 맞추기 위함*/
+    background-size: 100% 100%;
+}
+
+/*div 클래스에 작성하여 url을 불러올 수 있음*/
+.side-navigation-icon.chart{
+    background-image: url(../../resource/image/chart-icon.png);
+}
+
+.side-navigation-icon.pie{
+    background-image: url(../../resource/image/pie-icon.png);
+}
+
+.side-navigation-icon.edit{
+    background-image: url(../../resource/image/edit-icon.png);
+}
+
+.side-navigation-title{
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+
+    color: rgb(14, 17, 22);
 }
 
 .main-container{
     grid-area: main;
+    padding: 24px;
+    background-color: rgba(238, 238, 230, 0.54);
 }
