@@ -4,10 +4,10 @@
 */
 
 // function(매개변수){}
-let func = function (arg1,arg2){
+let func = function (arg1, arg2) {
 }
 
-func = (arg1,arg2) =>{ }
+func = (arg1, arg2) => { }
 
 /* 
     매개변수 지정 방법 
@@ -40,14 +40,14 @@ fun = arg => arg * arg;
 // 구현부가 한줄이면서 객체 리터럴을 반환할 때 함수의 중괄호를 제거하면 객체 리터럴을 소괄호로 묶어야함
 
 func = (name, tombName) => {
-    return{
+    return {
         name: name,
         tombName: tombName
     };
 };
 
 // 위의 표현을 아래와 같이 표현 가능
-func = (name, tombName) =>({
+func = (name, tombName) => ({
     name, tombName
 });
 
@@ -57,19 +57,19 @@ func = (name, tombName) =>({
     - 콜백 함수에 많이 사용됨
 */
 
-const pow = (x) => { 
+const pow = (x) => {
     return x * x;
 };
 
 console.log(pow(10));
 
 // 콜백 함수
-const numbers = [1,2,3,4,5];
-numbers.forEach(function(value, index){
+const numbers = [1, 2, 3, 4, 5];
+numbers.forEach(function (value, index) {
     console.log(`index : ${index} / value : ${value}`)
 });
 
 // 콜백함수를 화살표 함수로 지정
-numbers.forEach((value,index) => {
+numbers.forEach((value, index) => {
     console.log(`index : ${index} / value : ${value}`)
 });
