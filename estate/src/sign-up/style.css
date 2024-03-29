@@ -1,15 +1,16 @@
-
 #sign-up-wrapper {
     display: flex;
     width: 100%;
-    height: 100vh; /*뷰포트 전체 할당*/
+    height: 100vh;
+    /*뷰포트 전체 할당*/
     min-height: 1024px;
 }
 
 .sign-up-image-box {
     min-width: 830px;
     background-image: url('../../resource/image/sign-in-background.png');
-    background-size: cover;/*지정한 값보다 이미지가 세로로 크기 때문에 사용 */
+    background-size: cover;
+    /*지정한 값보다 이미지가 세로로 크기 때문에 사용 */
 }
 
 .sign-up-box {
@@ -18,7 +19,8 @@
     align-items: center;
 
     flex-grow: 1;
-    min-width: 610px;/*1440-830*/
+    min-width: 610px;
+    /*1440-830*/
 }
 
 .sign-up-container {
