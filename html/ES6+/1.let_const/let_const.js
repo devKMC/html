@@ -74,7 +74,7 @@ var varHosting = 10;
 // const king = { name : '이성계' };
 // king = { name : '이방원' };
 
-// 값은 변경 가능
+// 속성 (값) 은 변경 가능
 const king = { name : '이성계' };
 king.name = '이방원';
 console.log(king)
