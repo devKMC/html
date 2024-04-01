@@ -31,7 +31,11 @@ console.log('==================================================');
 
 class king {
     // constructor(){} < 주석한 이유 : 오버로드는 사용할 수 없기에 주석함.
+
+    // 생성자를 정의하여 클래스의 인스턴스가 생성될 때 호출되는 메서드
+    // 인스턴스의 속성을 초기화하기 위해 매개변수로 받은 값들을 할당함
     constructor(name, tombName, birth, death) {
+        // 매개변수로 받은 값들을 각 각 초기화
         this.name = name;
         this.tombName = tombName;
         this.birth = birth;
@@ -41,7 +45,9 @@ class king {
 }
 
 // 값을 바로 입력할 수 있음.
+// 값을 가지고 새로운 king 클래스의 인스턴스를 생성
 const junjong = new king('이방과', '정종', '1357-07-26', '1419-10-24');
+//unjong 인스턴스를 콘솔에 출력
 console.log(junjong);
 
 console.log('==================================================');
@@ -144,41 +150,41 @@ console.log('==================================================');
 */
 
 class ParentClass {
-    parentField; // 부모 필드 생성
+    parentField;
 
-    constructor (parentField){
+    constructor (parentField) {
         this.parentField = parentField;
     }
 
-    parentField(){
+    parentMethod () {
         console.log('부모 메서드');
     }
 }
 
+
 class Child1Class extends ParentClass {
-    // 필드 넣기
     child1Field;
 
-    // 생성자 만들기
-    constructor(){
+    constructor() {
         super('부모 필드');
-        this.child1Field = '자식 1 필드';
+        this.child1Field = '자식1 필드';
     }
-    child1Method(){
-        console.log('자식 1 메서드');
+
+    child1Method () {
+        console.log('자식1 메서드');
     }
 }
 
-class child2Class extends ParentClass {
+class Child2Class extends ParentClass {
     child2Field;
 
-    constructor(){
+    constructor () {
         super('부모 필드');
-        this.child2Field = '자식 2 필드';
+        this.child2Field = '자식2 필드';
     }
 
-    parentMethod(){
-        console.log('자식 2 메서드');
+    parentMethod () {
+        console.log('자식2 메서드');
     }
 }
 
@@ -190,8 +196,7 @@ console.log(child1Instance.child1Field);
 child1Instance.parentMethod();
 child1Instance.child1Method();
 
-const child2Instance = new child2Class();
+const child2Instance = new Child2Class();
 console.log(child2Instance.parentField);
 console.log(child2Instance.child2Field);
 child2Instance.parentMethod();
-

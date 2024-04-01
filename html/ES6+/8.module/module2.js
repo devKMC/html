@@ -10,6 +10,7 @@ console.log(exportVariable);
 import defaultVariable from './module.mjs';
 console.log(defaultVariable);
 
+
 /*
     - as 키워드의 export로 내보낸 대상의 이름을 변경하여 사용할 수 있음
 */
@@ -28,7 +29,5 @@ console.log(md.default);
     - 모듈의 이름이 index 이면 해당 모듈의 폴더명으로 import 가능
 */
 
-import { indexExport } from './folder';
-console.log(indexExport);
-
-
+// import { indexExport } from './folder';
+// console.log(indexExport);

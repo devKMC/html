@@ -9,22 +9,22 @@
 */
 
 // 기능을 전달하기 위하여 화살표 함수를 사용함.
-const number = 9;
+const number = 10;
 const promise = new Promise((resolve, reject) => {
     if (number % 2 !== 0) resolve('Success');
     else reject('fail');
 });
 
-// console.log('A point');
+console.log('A point');
 
-// console.log('promise');
+console.log('promise');
 
-// console.log('b point');
+console.log('b point');
 
-// promise.then((result) => { console.log(result) })
-//     .catch((result) => { console.log(`cathchg : ${result}`) });
+promise.then((result) => { console.log(result) })
+    .catch((result) => { console.log(`cathchg : ${result}`) });
 
-// console.log('c point');
+console.log('c point');
 
 
 console.log('==================================================');
@@ -38,7 +38,7 @@ console.log('==================================================');
 const asyncFunction = async () => {
     console.log('A point');
 
-    const result =await promise;
+    const result =await promise.catch((result)=> {return result});
     console.log(result)
 
     console.log('B point');
