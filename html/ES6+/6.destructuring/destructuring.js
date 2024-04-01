@@ -92,7 +92,4 @@ console.log(birth);
 console.log(death);
 console.log(reftKing);
 
-
-
-
 console.log('========================================');
