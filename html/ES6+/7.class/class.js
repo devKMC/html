@@ -194,3 +194,4 @@ const child2Instance = new child2Class();
 console.log(child2Instance.parentField);
 console.log(child2Instance.child2Field);
 child2Instance.parentMethod();
+
