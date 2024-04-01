@@ -74,35 +74,123 @@ class Sample {
     }
 }
 
+const sampleInstance = new Sample('퍼블릭 필드', '프라이빗 필드');
 
+console.log(sampleInstance);
+// console.log(sampleInstance.#privateField);
+// 자바 스크립트는 클래스로 접근해줘야함
+console.log(Sample.staticPublicField);
 
 console.log('==================================================');
 
-/*
+/*  추상화 , 상속 , 다형성 , 캡슐화
     getter, setter : 
-    - 
-    - 
+    - getter : 프라이빗 멤버 변수의 값을 얻을 수 있는 캡슐화 메서드
+    - setter : 프라이빗 멤버 변수의 값을 할당 할 수 있는 캡슐화 메서드
 */
+class Sample2 {
+    #privateField;
+    
+    constructor (privateField){
+        this.#privateField = privateField;
+    }
 
+    get privateField(){
+        return this.#privateField;
+    }
 
+    set privateField(privateField){
+        this.#privateField = privateField;
+    }
+}
+
+const sample2Instance = new Sample2('프라이빗 필드');
+console.log(sample2Instance.privateField);
+sample2Instance.privateField='변경 프라이빗 필드';
+console.log(sample2Instance.privateField);
 
 console.log('==================================================');
 
 /*
     인스턴스 메서드와 정적 메서드 : 
-    - 
-    - 
+    - 클래스 내부에 function 키워드를 제거한 함수를 작성하여 인스턴스 메서드를 선언 가능
+    - static 키워드를 추가하여 정적 메서드 선언 가능
 */
 
+// 생성자를 만들지 않아도 Sample3의 기본 생성자가 만들어짐 
+class Sample3{
+    instanceMethod(){
+        console.log('인스턴스 메서드');
+    }
 
+    static staticMethod(){
+        console.log('정적 메서드');
+    }
+}
+
+// 인스턴스 생성후 호출
+const Sample3Instance = new Sample3();
+Sample3Instance.instanceMethod();
+// static으로 지정된 메서드는 클래스를 통해서 직접 호출해야 함
+Sample3.staticMethod();
 
 console.log('==================================================');
 
 /*
     클래스 상속 : 
-    - 
-    - 
-    - 
+    - extends 키워드를 사용하여 클래스 상속 가능
+    - 메서드 오버라이딩 가능
+    - super 키워드로 부모 클래스를 참조할 수 있음
 */
 
+class ParentClass {
+    parentField; // 부모 필드 생성
 
+    constructor (parentField){
+        this.parentField = parentField;
+    }
+
+    parentField(){
+        console.log('부모 메서드');
+    }
+}
+
+class Child1Class extends ParentClass {
+    // 필드 넣기
+    child1Field;
+
+    // 생성자 만들기
+    constructor(){
+        super('부모 필드');
+        this.child1Field = '자식 1 필드';
+    }
+    child1Method(){
+        console.log('자식 1 메서드');
+    }
+}
+
+class child2Class extends ParentClass {
+    child2Field;
+
+    constructor(){
+        super('부모 필드');
+        this.child2Field = '자식 2 필드';
+    }
+
+    parentMethod(){
+        console.log('자식 2 메서드');
+    }
+}
+
+// 상속 , 다형성 (parentMethod) , 캡슐화  쓰였음
+
+const child1Instance = new Child1Class();
+console.log(child1Instance.parentField);
+console.log(child1Instance.child1Field);
+child1Instance.parentMethod();
+child1Instance.child1Method();
+
+const child2Instance = new child2Class();
+console.log(child2Instance.parentField);
+console.log(child2Instance.child2Field);
+child2Instance.parentMethod();
